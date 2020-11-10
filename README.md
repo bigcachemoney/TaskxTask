@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Task x Task provides a service platform for connecting users with skilled Taskers. 
 
-Things you may want to cover:
+Task x Task is a web application based on the popular freelance marketplace company TaskRabbit. 
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
