@@ -122,3 +122,466 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 2203ms (Views: 2197.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-11-16 20:13:00 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-16 20:16:29 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1686ms (Views: 1675.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-16 20:20:26 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233920818100'
+
+Started POST "/__better_errors/8a935084fb25df83/variables" for ::1 at 2020-11-16 20:20:27 -0500
+Started GET "/" for ::1 at 2020-11-16 20:23:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233930070220'
+
+Started POST "/__better_errors/9b63682a010783dc/variables" for ::1 at 2020-11-16 20:23:28 -0500
+Started GET "/" for ::1 at 2020-11-16 20:25:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233942280960'
+
+Started POST "/__better_errors/fd17c822fa04574f/variables" for ::1 at 2020-11-16 20:25:57 -0500
+Started GET "/" for ::1 at 2020-11-16 20:27:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233938608560'
+
+Started POST "/__better_errors/6dde6c63d400b48d/variables" for ::1 at 2020-11-16 20:27:35 -0500
+Started GET "/" for ::1 at 2020-11-16 20:31:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233998895080'
+
+Started POST "/__better_errors/ebe7e7f7f3b9c629/variables" for ::1 at 2020-11-16 20:31:45 -0500
+Started GET "/" for ::1 at 2020-11-16 20:32:15 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233923781420'
+
+Started POST "/__better_errors/62da2806d2796cf0/variables" for ::1 at 2020-11-16 20:32:15 -0500
+Started GET "/" for ::1 at 2020-11-16 20:32:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233944339840'
+
+Started POST "/__better_errors/88f0c1cdc4d04c7f/variables" for ::1 at 2020-11-16 20:32:55 -0500
+Started GET "/" for ::1 at 2020-11-16 20:32:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233919860080'
+
+Started POST "/__better_errors/38d7bdf292fd3916/variables" for ::1 at 2020-11-16 20:32:57 -0500
+Started GET "/" for ::1 at 2020-11-16 20:33:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233938610520'
+
+Started POST "/__better_errors/860271a544a38e3c/variables" for ::1 at 2020-11-16 20:33:20 -0500
+Started GET "/" for ::1 at 2020-11-16 20:33:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233942544860'
+
+Started POST "/__better_errors/de1d40696c926468/variables" for ::1 at 2020-11-16 20:33:33 -0500
+Started GET "/" for ::1 at 2020-11-16 20:37:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233998555280'
+
+Started POST "/__better_errors/0377c2d59f3a7c1d/variables" for ::1 at 2020-11-16 20:37:08 -0500
+Started POST "/__better_errors/0377c2d59f3a7c1d/variables" for ::1 at 2020-11-16 20:37:18 -0500
+Started GET "/" for ::1 at 2020-11-16 20:39:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233938691740'
+
+Started POST "/__better_errors/dc37ee6e9d97ca5a/variables" for ::1 at 2020-11-16 20:39:45 -0500
+Started GET "/" for ::1 at 2020-11-16 20:39:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233942265320'
+
+Started POST "/__better_errors/aaee0eacd8ecc506/variables" for ::1 at 2020-11-16 20:39:46 -0500
+Started GET "/" for ::1 at 2020-11-16 20:42:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233922456380'
+
+Started POST "/__better_errors/57c38e51267b7647/variables" for ::1 at 2020-11-16 20:42:28 -0500
+Started GET "/" for ::1 at 2020-11-16 20:46:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233936978880'
+
+Started POST "/__better_errors/3084fa36298b02d7/variables" for ::1 at 2020-11-16 20:46:33 -0500
+Started GET "/" for ::1 at 2020-11-16 20:46:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233919894800'
+
+Started POST "/__better_errors/c8a21c1720fc2c57/variables" for ::1 at 2020-11-16 20:46:34 -0500
+Started GET "/" for ::1 at 2020-11-16 20:53:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233942527140'
+
+Started POST "/__better_errors/544b1234c98d6a41/variables" for ::1 at 2020-11-16 20:53:41 -0500
+Started GET "/" for ::1 at 2020-11-16 20:59:50 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233921145340'
+
+Started POST "/__better_errors/f785e782c501c679/variables" for ::1 at 2020-11-16 20:59:50 -0500
+Started GET "/" for ::1 at 2020-11-16 20:59:58 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/config
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/images
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/assets/stylesheets
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.4/app/assets/javascripts
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.4/lib/assets/compiled
+  /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ray/Documents/appacademy/august/fullstack/task_x_task/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3532540090063077988_70233936241680'
+
+Started POST "/__better_errors/629c1486983ab2b3/variables" for ::1 at 2020-11-16 20:59:59 -0500
+Started GET "/" for ::1 at 2020-11-16 21:00:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
