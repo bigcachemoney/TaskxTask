@@ -11,9 +11,15 @@ class User < ApplicationRecord
   has_many :reviews,
     foreign_key: :user_id
     
-  has_many :tasks
+  has_many :tasks,
     through: :missions,
     source: :task
+
+  has_many :missions,
+    through: :missions,
+    source: :task
+
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
