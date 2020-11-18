@@ -647,3 +647,138 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 2919ms (Views: 2914.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(841322683112022195)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCategories (20201118042503)
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (65.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "job_type" character varying NOT NULL, "task_id" integer NOT NULL)[0m
+  ↳ db/migrate/20201118042503_create_categories.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_categories_on_task_id" ON "categories"  ("task_id")[0m
+  ↳ db/migrate/20201118042503_create_categories.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (6.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201118042503"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMissions (20201118042520)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "missions" ("id" bigserial primary key, "task_id" integer NOT NULL, "tasker_id" integer NOT NULL, "categories_id" integer NOT NULL, "start_date" date NOT NULL, "completed" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201118042520_create_missions.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_task_id" ON "missions"  ("task_id")[0m
+  ↳ db/migrate/20201118042520_create_missions.rb:12
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_tasker_id" ON "missions"  ("tasker_id")[0m
+  ↳ db/migrate/20201118042520_create_missions.rb:13
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_categories_id" ON "missions"  ("categories_id")[0m
+  ↳ db/migrate/20201118042520_create_missions.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201118042520"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(841322683112022195)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/" for ::1 at 2020-11-17 23:53:04 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 616ms (Views: 605.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-17 23:57:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 104ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:00:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 98ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:00:15 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:01:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 120ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:01:52 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 96ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:07:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 110ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:07:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:08:35 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 125ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:09:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 765ms (Views: 756.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 00:12:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 730ms (Views: 721.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 10:21:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 2218ms (Views: 2170.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-18 11:13:18 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 788ms (Views: 772.8ms | ActiveRecord: 0.0ms)
+
+

@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  email           :string           not null
+#  name            :string
+#  description     :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 class User < ApplicationRecord
 
   attr_reader :password
@@ -18,8 +32,6 @@ class User < ApplicationRecord
   has_many :missions,
     through: :missions,
     source: :task
-
-
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
