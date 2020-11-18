@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
     store = configureStore(preloadedState);
-
-    // Clean up after ourselves so we don't accidentally use the
-    // global currentUser instead of the one in the store
     delete window.currentUser;
 
   } else {
@@ -24,4 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
+
+  //TESTING PURPOSES
+  window.getState = store.getState;
+  window.dispatch = store.dispatch; 
 });

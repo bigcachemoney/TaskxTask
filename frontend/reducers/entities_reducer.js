@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 
-import tasks from './tasks_reducer';
-import reviews from './reviews_reducer';
-import users from './users_reducer';
+import tasksReducer from './tasks_reducer';
+// import reviews from './reviews_reducer';
+import usersReducer from './users_reducer';
 
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
-  tasks: tasksReducer
+  tasks: tasksReducer,
 });
 
 export default entitiesReducer;
