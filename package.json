@@ -34,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigcachemoney/taskbunny.git"
+    "url": "git+https://github.com/bigcachemoney/taskxtask.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bigcachemoney/taskbunny/issues"
+    "url": "https://github.com/bigcachemoney/taskxtask/issues"
   },
-  "homepage": "https://github.com/bigcachemoney/taskbunny#readme"
+  "homepage": "https://github.com/bigcachemoney/taskxtask#readme"
 }
