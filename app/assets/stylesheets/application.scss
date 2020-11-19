@@ -15,3 +15,27 @@
  */
 
  @import url('https://fonts.googleapis.com/css?family=Dokdo');
+
+ .wallpaper {
+  background-image: url('https://i.imgur.com/H4Nef0z.jpg');
+  // background-image: url('https://i.imgur.com/CkSRmCB.jpg');
+  // background-image: url('https://upload-os-bbs.mihoyo.com/upload/2020/09/14/1013950/b64635d0e00e6dcb98db652903e489b4_1770408859803527337.jpg?x-oss-process=image/resize,s_740/quality,q_80/auto-orient,0/interlace,1/format,jpg');
+  // background-image: url('https://upload-os-bbs.mihoyo.com/upload/2020/09/14/1013950/ec652a6ea054df9bd3c16da8a62756b5_5943270740035137873.jpg?x-oss-process=image/resize,s_740/quality,q_80/auto-orient,0/interlace,1/format,jpg');
+
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+// .logo { 
+//   background-image: url("https://i.imgur.com/7FP232c.png");
+//     // object-fit: cover;
+//     // object-position: 100% 40%;
+//     max-width:30%;
+//     max-height:30%;
+// }
+

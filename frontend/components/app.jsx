@@ -7,13 +7,14 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import Splash from './splash/splash';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 // import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import SplashContainer from './splash/splash_container';
+// import TaskForm from './tasks/task_container';
 const App = () => (
   <div>
       {/* <GreetingContainer /> */}
@@ -21,9 +22,9 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      {/* <ProtectedRoute exact path="/tasks/new" component={TaskFormContainer} /> */}
-      {/* <Route path="/tasks/:taskid" component={TaskShowContainer} /> */}
-      <Route path="/" component={Splash} />
+      {/* <ProtectedRoute exact path="/tasks" component={TaskForm} /> */}
+      {/* <ProtectedRoute exact path="/tasks/:taskid" component={TaskShowContainer} /> */}
+      <Route path="/" component={SplashContainer} />
     </Switch>
 
   </div>

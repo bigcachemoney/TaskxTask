@@ -1,0 +1,31 @@
+.login-form-box{
+  // flex-basis: 664px;
+  margin: auto;
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: 4px;
+  // font-family: 'Dokdo';
+  font-family: Arial, Helvetica, sans-serif;
+  // font-size: 40px;
+  background-color: rgba(247, 247, 247, 0.5); 
+  max-width: 500px;
+}
+
+.session-submit{
+    color: rgb(146, 160, 195);
+  background-color: rgb(41, 36, 135);
+  // font-family: 'Dokdo';
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px 30px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.errors{
+  text-align: left;
+  color: red;
+}

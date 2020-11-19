@@ -1,11 +1,23 @@
-import { allTasks } from '../util/task_api_util';
+import * as TaskAPIUtil from '../util/task_api_util';
 
-export const RECEIVE_ALL_TASKS = 'RECEIVE_ALL_TASKS';
+export const RECEIVE_TASKS = 'RECEIVE_TASKS';
+export const RECEIVE_TASK = 'RECEIVE_TASK';
 
-const receiveAllTasks = (tasks) => ({
-  type: RECEIVE_ALL_TASKS,
-  tasks,
+const receiveTasks = tasks => ({
+  type: RECEIVE_TASKS,
+  tasks
+});
+const receiveTask = task => ({
+  type: RECEIVE_TASK,
+  task
 });
 
-export const receiveTasks = () => (dispatch) => (allTasks())
-  .then((tasks) => dispatch(receiveAllTasks(tasks)));
+export const fetchTasks = () => dispatch => (
+  TaskAPIUtil.getTasks()
+    .then((tasks) => dispatch(receiveTasks(tasks)))
+);
+
+export const fetchTask = taskId => dispatch => (
+  TaskAPIUtil.getTask(taskId)
+    .then((task) => dispatch(receiveTasks(task)))
+);
