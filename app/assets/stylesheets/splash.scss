@@ -1,10 +1,11 @@
 body {
   margin: 0;
+    // font-family: 'Dokdo';
 }
 
 .wallpaper {
-  // background-image: url('https://i.imgur.com/CkSRmCB.jpg');
   background-image: url('https://i.imgur.com/H4Nef0z.jpg');
+  // background-image: url('https://i.imgur.com/CkSRmCB.jpg');
   // background-image: url('https://upload-os-bbs.mihoyo.com/upload/2020/09/14/1013950/b64635d0e00e6dcb98db652903e489b4_1770408859803527337.jpg?x-oss-process=image/resize,s_740/quality,q_80/auto-orient,0/interlace,1/format,jpg');
   // background-image: url('https://upload-os-bbs.mihoyo.com/upload/2020/09/14/1013950/ec652a6ea054df9bd3c16da8a62756b5_5943270740035137873.jpg?x-oss-process=image/resize,s_740/quality,q_80/auto-orient,0/interlace,1/format,jpg');
 
@@ -42,9 +43,10 @@ body {
 #login{
   color: rgb(146, 160, 195);
   background-color: rgb(41, 36, 135);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dokdo';
   border: none;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bolder;
   padding: 10px 30px;
   margin: 10px;
   text-decoration: none;
@@ -52,16 +54,17 @@ body {
 }
 
 #login:hover{
-    background-color: rgb(146, 160, 195);
-    color: rgb(41, 36, 135);
+  background-color: rgb(146, 160, 195);
+  color: rgb(41, 36, 135);
 }
 
 #signup{
   color: rgb(146, 160, 195);
   background-color: rgb(41, 36, 135);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dokdo';
+  font-size: 20px;
+  font-weight: bolder;
   border: none;
-  font-size: 15px;
   padding: 10px 30px;
   margin: 10px;
   text-decoration: none;
@@ -73,3 +76,72 @@ body {
     background-color: rgb(146, 160, 195);
     color: rgb(41, 36, 135);
 }
+
+
+.text-container{
+  flex-basis: 664px;
+  margin: auto;
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: 4px;
+  // font-family: 'Dokdo';
+  font-family: Arial, Helvetica, sans-serif;
+  // font-size: 40px;
+  background-color: rgba(247, 247, 247, 0.5); 
+      // max-width: 700px;
+}
+  .text-header{
+    font-family: 'Dokdo';
+    font-weight: bolder;
+    font-size: 50px;
+    line-height: 49px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    
+  }
+  
+  .text-body{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 49px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+
+  }
+  
+  .search-form{
+    // display: flex;
+    // justify-content: space-between;
+    align-items: center;
+  }
+  
+  #searchbutton{
+  background-color: rgb(146, 160, 195);
+  color: rgb(41, 36, 135);
+  border: none;
+  // font-family: 'Dokdo';
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 10px 30px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 30px;
+  }
+  
+  .searchbox{
+      width: 100%;
+      text-align: center;
+  }
+  
+  #search{
+    width: 300px;
+    height: 35px;
+    border: 1px;
+    border-radius: 5px;
+  }
+
