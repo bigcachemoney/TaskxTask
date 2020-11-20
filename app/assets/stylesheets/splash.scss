@@ -27,18 +27,21 @@ body {
   // z-index: 1;
 }
 
+.logolink {
+  max-width: 300px;
+}
+
 .logo { 
+  max-width:30%;
+  max-height:30%;
   // background-image: url("https://i.imgur.com/7FP232c.png");
     // object-fit: cover;
     // object-position: 100% 40%;
-    max-width:30%;
-    max-height:30%;
 }
 
-// #buttons{
-//   max-width:30%;
-//   max-height:30%;
-// }
+#buttons{
+  max-width: 300px;
+}
 
 #login{
   color: rgb(146, 160, 195);
@@ -47,7 +50,7 @@ body {
   border: none;
   font-size: 20px;
   font-weight: bolder;
-  padding: 10px 30px;
+  padding: 10px 30px;  
   margin: 10px;
   text-decoration: none;
   border-radius: 30px;

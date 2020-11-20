@@ -6,8 +6,8 @@ import usersReducer from './users_reducer';
 
 
 const entitiesReducer = combineReducers({
-  users: usersReducer,
-  tasks: tasksReducer,
+  usersReducer,
+  tasksReducer,
 });
 
 export default entitiesReducer;

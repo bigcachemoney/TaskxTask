@@ -15,19 +15,22 @@ import LogInFormContainer from './session_form/login_form_container';
 
 import SplashContainer from './splash/splash_container';
 // import TaskForm from './tasks/task_container';
-const App = () => (
-  <div>
-      {/* <GreetingContainer /> */}
+const App = () => {
+  debugger
+  return (
+    <div>
+        {/* <GreetingContainer /> */}
 
-    <Switch>
-      <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      {/* <ProtectedRoute exact path="/tasks" component={TaskForm} /> */}
-      {/* <ProtectedRoute exact path="/tasks/:taskid" component={TaskShowContainer} /> */}
-      <Route path="/" component={SplashContainer} />
-    </Switch>
+      <Switch>
+        <AuthRoute exact path="/login" component={LogInFormContainer} />
+        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        {/* <ProtectedRoute exact path="/tasks/new" component={TaskFormContainer} /> */}
+        {/* <ProtectedRoute exact path="/tasks/:taskid" component={TaskShowContainer} /> */}
+        <Route path="/" component={SplashContainer} />
+      </Switch>
 
-  </div>
-);
+    </div>
+  )
+};
 
 export default App;

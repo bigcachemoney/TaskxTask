@@ -2,6 +2,7 @@ import React from 'react';
 
 class SessionForm extends React.Component {
   constructor(props) {
+    debugger
     super(props);
     this.state = {
       username: '',
@@ -12,18 +13,21 @@ class SessionForm extends React.Component {
   }
 
   update(field) {
+    debugger
     return e => this.setState({
       [field]: e.currentTarget.value
     });
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
 
   renderErrors() {
+    debugger
     return (
       <ul>
         {this.props.errors.map((error, i) => (
@@ -36,6 +40,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    debugger
     const email = this.props.formType === 'sign up' ? (
       <label>Email:
         <input type="text"
@@ -44,8 +49,9 @@ class SessionForm extends React.Component {
           className="login-input"
         />
       </label>
+      
     ) : ( '' );
-
+    <br />
     return (
       <div className="wallpaper">
 
