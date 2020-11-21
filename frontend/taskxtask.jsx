@@ -24,5 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //TESTING PURPOSES
   window.getState = store.getState;
-  // window.dispatch = store.dispatch; 
+  window.dispatch = store.dispatch; 
 });

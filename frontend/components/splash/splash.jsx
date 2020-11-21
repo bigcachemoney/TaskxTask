@@ -5,30 +5,33 @@ import { Link } from 'react-router-dom';
 
 const Splash = props => {
 
-  const display = props.loggedIn ? ( 
+  const displaybuttons = props.loggedIn ? ( 
     <div className="logoutbutton">
-      <button onClick={props.logout}>
+      <button className="session-submit" onClick={props.logout}>
         Logout
       </button>
     </div>
   ) : (
-    <div id="buttons">
-      <Link id="login" to="/login">LOGIN</Link>
-      <Link id="signup" to="/signup">SIGN UP</Link>
+    <div className="buttons">
+      {/* <Link className="login" to="/task">DEMO LOGIN</Link> */}
+      <Link className="login" to="/login">LOGIN</Link>
+      <Link className="signup" to="/signup">SIGN UP</Link>
     </div>
   )
 
-  const book = props.loggedIn ? ( 
+  const bookbutton = props.loggedIn ? ( 
     <div className="book-task-button">
-      <button onClick={props.logout}> 
-        Book a Task
-      </button>
+      <Link to="/task/new">
+        <button className="session-submit" onClick={props.logout}> 
+          Book a Task
+        </button>
+      </Link>
     </div>
   ) : ('')
   
   const treasurehunt = props.loggedIn ? ( 
     <div className="treasure-hunt-button">
-      <button onClick={props.logout}> 
+      <button className="session-submit" onClick={props.logout}> 
         Treasure Hunt
       </button>
     </div>
@@ -36,7 +39,7 @@ const Splash = props => {
 
   const protection = props.loggedIn ? ( 
     <div className="protection-button">
-      <button onClick={props.logout}> 
+      <button className="session-submit" onClick={props.logout}> 
         Protection
       </button>
     </div>
@@ -44,7 +47,7 @@ const Splash = props => {
 
   const monster = props.loggedIn ? ( 
     <div className="monster-slaying-button">
-      <button onClick={props.logout}> 
+      <button className="session-submit" onClick={props.logout}> 
         Monster Slaying
       </button>
     </div>
@@ -52,17 +55,17 @@ const Splash = props => {
 
   debugger
   return (
-    <div className="main-splash">
-      <div className="wallpaper">
+    <div className="main-splash-container">
+        <div className="wallpaper">
+          <img src="https://i.imgur.com/H4Nef0z.jpg"/>
+        </div>
+
         <div className="topnav">
           <Link className="logolink" to="/">
             <img className="logo" src="https://i.imgur.com/7FP232c.png"/>
           </Link>
-
-
-        {book}
-        {display}
-
+          {bookbutton}
+          {displaybuttons}
         </div>
 
         <div className="text-container">
@@ -78,14 +81,34 @@ const Splash = props => {
                       </div>
                   </div>
               </div>
-              
+
           {treasurehunt}
           {protection}
           {monster}
         </div>
-        
-      </div>
 
+        <div className="footer">
+
+          <div className="footer-txt">Created by Ray Liang </div>
+          <div className="footer-links">
+
+           {/* <div className="footer-github">|</div> */}
+            <a href="https://github.com/bigcachemoney">
+              <button className="github"></button>
+            </a>
+
+            {/* <div className="footer-linkedin">|</div> */}
+            <a href="https://www.linkedin.com/in/raylanliang/">
+              <button className="linkedin"></button>
+            </a>
+
+            {/* <div className="footer-break">|</div> */}
+            <a href="https://www.instagram.com/sizzlinwok/">
+              <button className="instagram"></button>
+            </a>
+
+          </div>
+        </div>
 
     </div>
   )

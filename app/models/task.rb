@@ -10,6 +10,7 @@ class Task < ApplicationRecord
 
     belongs_to :user,
       class_name: :User
+      
     has_many :categories,
       class_name: :category
       
