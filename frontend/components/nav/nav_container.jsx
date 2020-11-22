@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Splash from './splash';
+import Nav from './nav';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
@@ -17,4 +17,4 @@ const mapDispatchToProps = dispatch => {
   });
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Splash); 
+export default connect(mapStateToProps, mapDispatchToProps)(Nav); 

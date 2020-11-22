@@ -5,8 +5,9 @@ import { fetchTasks, fetchTask, deleteTask } from '../../actions/task_actions';
 import TaskForm from './task_form';
 
 const mapState = state => {
+  debugger
   return {
-    tasks: state.entities.tasks
+    tasks: Object.values(state.entities.tasks)
   };
 };
 

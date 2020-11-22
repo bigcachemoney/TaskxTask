@@ -5,9 +5,10 @@ class TaskForm extends React.Component {
     debugger
     super(props)
     this.state = {
-        user_id: this.props.user_id
-
-
+        user_id: this.props.user_id,
+        // address = "",
+        // interests = "",
+        // description = ""
     }
   }
 
@@ -21,4 +22,8 @@ class TaskForm extends React.Component {
         </div>
     </div>
   }
+
+
 }
+
+export default TaskForm;
