@@ -1,10 +1,25 @@
 .footer {
   position: relative;
-  background-color: rgb(86, 93, 97);
+  background-color: rgb(112, 118, 121);
   // color: #242a30;
   color: white;
-    font-family: "Proxima", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.5;
+  font-family: "Proxima", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  // align-items: center;
+}
+
+.socialmedia{
+  // size: 10px;
+  color: lightgreen;
+
+}
+.socialmedia:hover{
+  // size: 10px;
+  // color: rgb(44, 106, 199);
+  // color: white;
+  //  color: rgb(146, 160, 195);
+   color: rgb(120, 114, 238);
+  //find method to increase icon size on hover
 }

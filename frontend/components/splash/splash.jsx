@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../footer/footer';
 import NavContainer from '../nav/nav_container';
 import  Category  from "./category";
-
+import Recommendations from "../recommendation/recommendation";
 //make this page more dynamic with props
 
 const Splash = props => {
@@ -168,7 +168,7 @@ debugger
           </div>
 
         </div>
-
+        <Recommendations />
         <Footer />
     </div>
   )
