@@ -3,6 +3,9 @@ import Nav from '../nav/nav_container';
 import Footer from '../footer/footer';
 import { FaEdit } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
+import TaskDetails from './task_details';
+import TaskOptions from './task_options';
+import FormAddress from './form_address';
 
 
 class TaskForm extends React.Component {
@@ -17,12 +20,11 @@ class TaskForm extends React.Component {
     // }
   }
 
-
-
   render (){
     return (
       <div className="taskform-container">
         <div className="taskform-header">
+
           <div className="taskform-header-top">
             <div><Link className="logolink" to="/"><img className="logo" src="https://i.imgur.com/7FP232c.png" /></Link></div>
             <ol>
@@ -31,33 +33,33 @@ class TaskForm extends React.Component {
               <li>Confirm details</li>
             </ol>
           </div>
+
           <div className="taskform-header-bottom">
             <span><FaEdit />Tell us about your task. We use these details to show Taskers in your area who fit your needs.</span>
           </div>
 
         </div>
-          <div className="taskform-middle-container">
-            <div className="form-address">
-              
-            </div>
 
-            <div className="task-options">
-
-            </div>
-
-            <div className="task-details">
-
-            </div>
+        <div className="taskform-middle-container">
+          <div className="form-address">
+            <FormAddress />
+          </div>
+          
+          <div className="task-options">
+            <TaskOptions />
           </div>
 
+          <div className="task-details">
+            <TaskDetails />
+          </div>
+        </div>
 
-
-        <Footer />
+        <div className="testingfooter">
+          <Footer />
+        </div>
       </div>
     )
   }
-
-
 }
 
 export default TaskForm;
