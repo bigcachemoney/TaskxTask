@@ -12,14 +12,24 @@
 
 .socialmedia{
   // size: 10px;
-  color: lightgreen;
-
+  
+  color: rgb(0, 0, 0);
 }
 .socialmedia:hover{
+  color: lightgreen;
   // size: 10px;
   // color: rgb(44, 106, 199);
   // color: white;
   //  color: rgb(146, 160, 195);
-   color: rgb(120, 114, 238);
+  //  color: rgb(255, 255, 255);
   //find method to increase icon size on hover
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+}
+.footer-txt{
+  display: flex;
+  justify-content: center;
 }

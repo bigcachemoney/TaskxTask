@@ -4,13 +4,16 @@
 }
 
 .taskform-header-top{
-  background-color: honeydew;
+  background-color: rgb(255, 255, 255);
 }
 
 .taskform-middle-container{
   // background-color: rgba(233, 231, 231, 0.379);
   //   width: 80%;
   // margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
 }
 
 .form-address{
@@ -34,7 +37,8 @@
 
 }
 
-
+.form-address-container{
+}
 
 
 .taskform-header-bottom{

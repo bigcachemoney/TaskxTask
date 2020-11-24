@@ -6,7 +6,7 @@ class FormAddress extends React.Component {
   render() {
     return (
 
-      <div className="">
+      <div className="form-address-container">
         <div>
           <span>START ADDRESS</span>
           <br />
