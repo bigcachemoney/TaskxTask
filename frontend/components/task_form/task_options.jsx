@@ -8,7 +8,7 @@ class TaskOptions extends React.Component {
       <div className="">
         <div>
           <div>
-            <span>TASK OPTIONS</span>
+            <span className="form-text">TASK OPTIONS</span>
             <br />
 
             <span className="options-title">How big is your task?</span>

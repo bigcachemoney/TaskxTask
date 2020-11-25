@@ -15,17 +15,17 @@ class Footer extends React.Component {
         <div className="footer-links">
           <a href="https://github.com/bigcachemoney" className="socialmedia">
             {/* <button className="github"></button> */}
-            <FaGithub size="30"/>
+            <FaGithub size="40"/>
           </a>
 
           <a href="https://www.linkedin.com/in/raylanliang/" className="socialmedia">
             {/* <button className="linkedin"></button> */}
-            <FaLinkedin size="30"/>
+            <FaLinkedin size="40"/>
           </a>
 
           <a href="https://www.instagram.com/sizzlinwok/" className="socialmedia">
             {/* <button className="instagram"></button> */}
-            <FaInstagram size="30"/>
+            <FaInstagram size="40"/>
           </a>
 
         </div>

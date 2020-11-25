@@ -6,7 +6,7 @@ class TaskDetails extends React.Component {
   render() {
     return (
 
-      <div className="">
+      <div className="task-details-section">
         <div>
           <span>TELL US THE DETAILS OF YOUR TASK</span>
           <br />

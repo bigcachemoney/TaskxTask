@@ -8,7 +8,7 @@ class FormAddress extends React.Component {
 
       <div className="form-address-container">
         <div>
-          <span>START ADDRESS</span>
+          <span className="form-text">START ADDRESS</span>
           <br />
           <input type="text" />
         </div>

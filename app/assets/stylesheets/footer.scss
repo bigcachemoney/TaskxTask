@@ -1,19 +1,23 @@
 .footer {
-  position: relative;
   background-color: rgb(112, 118, 121);
   // color: #242a30;
   color: white;
   font-family: "Proxima", Arial, Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   // align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .socialmedia{
   // size: 10px;
   
   color: rgb(0, 0, 0);
+  font-size: 24px;
 }
 .socialmedia:hover{
   color: lightgreen;
@@ -33,3 +37,4 @@
   display: flex;
   justify-content: center;
 }
+

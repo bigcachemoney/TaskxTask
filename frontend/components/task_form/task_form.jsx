@@ -85,7 +85,7 @@ class TaskForm extends React.Component {
             </div>
 
           <div className="taskform-header-bottom">
-            <span><FaEdit />Tell us about your task. We use these details to show Taskers in your area who fit your needs.</span>
+            <FaEdit /><span className="taskform-header-bottom-span">Tell us about your task. We use these details to show Taskers in your area who fit your needs.</span>
           </div>
 
         </div>
@@ -104,9 +104,9 @@ class TaskForm extends React.Component {
           </div>
         </div>
 
-        <div className="testingfooter">
+
           <Footer />
-        </div>
+
       </div>
     )
   }
