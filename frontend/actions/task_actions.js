@@ -6,7 +6,7 @@ export const RECEIVE_TASK = 'RECEIVE_TASK';
 
 
 const receiveTasks = tasks => {
-  debugger
+  //debugger
   return ({
     type: RECEIVE_TASKS,
     tasks
@@ -14,7 +14,7 @@ const receiveTasks = tasks => {
 };
 
 const receiveTask = task => {
-  debugger
+  //debugger
   return ({
     type: RECEIVE_TASK,
     task
@@ -22,7 +22,7 @@ const receiveTask = task => {
 };
 
 // export const removeTask = taskId => {
-//   debugger
+//   //debugger
 //   return ({
 //     type: REMOVE_TASK,
 //     taskId
@@ -30,19 +30,19 @@ const receiveTask = task => {
 // };
 
 export const fetchTasks = () => dispatch => {
-  debugger
+  //debugger
   return TaskAPIUtil.fetchTasks()
     .then((tasks) => dispatch(receiveTasks(tasks)))
 };
 
 export const fetchTask = taskId => dispatch => {
-  debugger
+  //debugger
   return TaskAPIUtil.fetchTask(taskId)
     .then((task) => dispatch(receiveTask(task)))
 };
 
 // export const deleteTask = (taskId) => dispatch => {
-//   debugger
+//   //debugger
 //   return TaskAPIUtil.deleteTask(taskId)
 //   .then(() => dispatch(removeTask(taskId)))
 // };

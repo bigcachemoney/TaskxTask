@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
-    debugger
+    //debugger
     super(props);
     this.state = {
       username: '',
@@ -15,14 +15,14 @@ class SessionForm extends React.Component {
   }
 
   update(field) {
-    debugger
+    //debugger
     return e => this.setState({
       [field]: e.currentTarget.value
     });
   }
 
   handleSubmit(e) {
-    debugger
+    //debugger
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    debugger
+    //debugger
     return (
       <ul>
         {this.props.errors.map((error, i) => (
@@ -49,7 +49,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    debugger
+    // //debugger
     const email = this.props.formType === 'sign up' ? (
       <label>Email:
         <input type="text"

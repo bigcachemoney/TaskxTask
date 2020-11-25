@@ -1,3 +1,3 @@
-# debugger
+# //debugger
 json.partial! "api/users/user", user: @user
               

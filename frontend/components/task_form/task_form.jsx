@@ -10,7 +10,7 @@ import FormAddress from './form_address';
 
 class TaskForm extends React.Component {
   constructor(props){
-    debugger
+    //debugger
     super(props)
     // this.state = {
     //     // user_id: this.props.user_id,

@@ -6807,3 +6807,483 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 3121ms (Views: 3113.3ms | ActiveRecord: 0.9ms)
 
 
+Started DELETE "/api/session" for ::1 at 2020-11-24 22:56:05 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tt_o6HZ0on2Au_9o-WieqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "m8B5TB_2fClHca8W7nKf3Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "m8B5TB_2fClHca8W7nKf3Q"], ["updated_at", "2020-11-25 03:56:05.599275"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 35ms (Views: 20.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-24 22:56:08 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for ::1 at 2020-11-24 22:59:14 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["updated_at", "2020-11-25 03:59:20.283327"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (3.2ms)
+Completed 200 OK in 6034ms (Views: 22.2ms | ActiveRecord: 111.2ms)
+
+
+Started GET "/" for ::1 at 2020-11-24 23:02:08 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (56.3ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+Completed 200 OK in 3462ms (Views: 3437.4ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/" for ::1 at 2020-11-24 23:02:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.7ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 09:28:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (6.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (56.9ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+Completed 200 OK in 387ms (Views: 364.1ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:09 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:12 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:14 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:22 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:24 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:25 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:26 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:28:26 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started GET "/" for ::1 at 2020-11-25 09:28:30 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+Completed 200 OK in 124ms (Views: 119.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:31:05 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:31:58 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:45:49 -0500
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:45:58 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:45:59 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:45:59 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:46:00 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:46:12 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:46:12 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:46:13 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:46:13 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:46:13 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:42 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:44 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:44 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:44 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:45 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:45 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:49:49 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started GET "/" for ::1 at 2020-11-25 09:50:22 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (78.0ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+Completed 200 OK in 2484ms (Views: 2447.8ms | ActiveRecord: 32.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:50:29 -0500
+
+SyntaxError - unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:10: unknown regexp options - dbggr
+/Users/ray/Documents/appacademy/august/fullstack/task_x_task/app/controllers/api/sessions_controller.rb:14: unknown regexp options - dbggr:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:53:11 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kQa50YoLjRCls2szsbA2Ug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nVUhmB_sa2HpyQrRJaM-iA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (21.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "nVUhmB_sa2HpyQrRJaM-iA"], ["updated_at", "2020-11-25 14:53:11.294622"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 74ms (Views: 15.3ms | ActiveRecord: 37.0ms)
+
+
+Started POST "/api/user" for ::1 at 2020-11-25 09:53:21 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Opny_4Q4DK_vdMT0ZXPjfw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (42.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (23.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 505ms (Views: 0.2ms | ActiveRecord: 66.1ms)
+
+
+Started POST "/api/user" for ::1 at 2020-11-25 09:54:39 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WrdxIXFr654fd4UNsltYfA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 438ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/user" for ::1 at 2020-11-25 09:54:49 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dYmNlI_fQ3gVQk1JfPkqYw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 444ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-25 09:54:54 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lKCQL4R4X8fly-49Lwst6w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lKCQL4R4X8fly-49Lwst6w"], ["updated_at", "2020-11-25 14:54:54.966518"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 463ms (Views: 17.3ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:54:57 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lKCQL4R4X8fly-49Lwst6w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpCLbw84vBM-8AfHfmajsQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hpCLbw84vBM-8AfHfmajsQ"], ["updated_at", "2020-11-25 14:54:57.498462"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-25 09:55:15 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jW0guwG3gnGyY3p9IjDacQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jW0guwG3gnGyY3p9IjDacQ"], ["updated_at", "2020-11-25 14:55:15.743105"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 461ms (Views: 16.0ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-11-25 09:55:18 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jW0guwG3gnGyY3p9IjDacQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qwkDrWcrE3Q3Y2kuqM20Bw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qwkDrWcrE3Q3Y2kuqM20Bw"], ["updated_at", "2020-11-25 14:55:18.327407"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 09:57:10 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 931ms (Views: 925.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 09:57:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 115ms (Views: 110.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-25 09:57:34 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "x9Nz6DCQo_hGMdcsjQ0v8w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "x9Nz6DCQo_hGMdcsjQ0v8w"], ["updated_at", "2020-11-25 14:57:34.860127"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 453ms (Views: 14.4ms | ActiveRecord: 7.2ms)
+
+

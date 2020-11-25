@@ -128,7 +128,7 @@ const Splash = props => {
     // {/* </div> */}
   ) : ('')
 
-debugger
+//debugger
   return (
     <div className="main-splash-container">
           {/* <img className="wallpaper" src="https://i.imgur.com/H4Nef0z.jpg"/> */}
