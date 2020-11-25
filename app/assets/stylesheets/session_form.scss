@@ -12,14 +12,26 @@
   max-width: 500px;
 }
 
-.session-submit{
+.session-demo{
   color: rgb(146, 160, 195);
   background-color: rgb(41, 36, 135);
-  // font-family: 'Dokdo';
+  font-family: 'Dokdo';
   border: none;
   font-size: 20px;
   font-weight: bolder;
   padding: 10px 30px;
+  // margin: 10px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+.session-login{
+  color: rgb(146, 160, 195);
+  background-color: rgb(41, 36, 135);
+  font-family: 'Dokdo';
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px 55px;
   margin: 10px;
   text-decoration: none;
   border-radius: 30px;

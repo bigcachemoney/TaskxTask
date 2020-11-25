@@ -34,7 +34,23 @@
 
 }
 
-// .inter-form{
-//   display: flex;
-//   justify-content: space-between;
-// }
+.login-signup{
+    // background-color: white;
+    // border: 1px solid #f0ebeb;
+    // border-radius: 3px;
+    // box-shadow: 0 0 15px rgba(8,8,8,0.1);
+    // padding-bottom: 40px;
+    // padding-top: 30px;
+    // width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup2{
+  padding: 10px 10px 10px 10px;
+}
+.login2{
+  padding: 10px 10px 10px 10px;
+}

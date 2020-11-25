@@ -30,7 +30,8 @@ class SessionForm extends React.Component {
 
   demoSubmit(e) {
     e.preventDefault();
-    const demo = { username: "demo", password: "123456", email: "demo@email.com" };
+    const demo = {
+      username: "demo", password: "123456"};
     this.props.processForm(demo);
   }
 
@@ -72,7 +73,7 @@ class SessionForm extends React.Component {
           
             <div>
               <Link to="/">
-                <img className="logo" src="https://i.imgur.com/7FP232c.png" />
+                <img className="inter-logo" src="https://i.imgur.com/7FP232c.png" />
               </Link>
             </div>
 
@@ -85,29 +86,32 @@ class SessionForm extends React.Component {
           <div className="login-form">
             <br />
             {email}
-            <label>Username:
+            <label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
+                placeholder="Username"
               />
             </label>
 
             <br />
 
-            <label>Password:
+            <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
+                  placeholder="Password"
+
               />
             </label>
             <br />
-              {this.props.navLink}
-            <input className="session-submit" type="submit" value={this.props.formType} />
+              {/* {this.props.navLink} */}
+            <input className="session-login" type="submit" value={this.props.formType} />
             <br />
 
-            <button className="session-submit" onClick={this.demoSubmit}>Demo Login</button>
+            <button className="session-demo" onClick={this.demoSubmit}>Demo Login</button>
           </div>
         </form>
       </div>

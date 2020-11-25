@@ -8,7 +8,7 @@
 
 
 User.create(
-    username: 'ray', 
+    username: 'demo', 
     email: 'demouser@example.com',  
     password: '123456'
     # password_digest: BCrypt::Password.create('demouser'),  
