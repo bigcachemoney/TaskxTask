@@ -13,4 +13,4 @@ User.create(
     password: '123456'
     # password_digest: BCrypt::Password.create('demouser'),  
     # session_token: SecureRandom.base64
-    )
+)

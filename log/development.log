@@ -6533,3 +6533,277 @@ Processing by Api::SessionsController#create as JSON
 Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2020-11-24 22:41:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 1742ms (Views: 1715.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-24 22:41:33 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+Completed 401 Unauthorized in 13ms (Views: 0.4ms | ActiveRecord: 2.4ms)
+
+
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (129.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "taskxtask_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (86.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "taskxtask_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (415.0ms)[0m  [1m[35mCREATE DATABASE "taskxtask_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (106.4ms)[0m  [1m[35mCREATE DATABASE "taskxtask_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (5.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (42.0ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "job_type" character varying NOT NULL, "task_id" integer NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_categories_on_task_id" ON "categories"  ("task_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "missions" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE TABLE "missions" ("id" bigserial primary key, "task_id" integer NOT NULL, "tasker_id" integer NOT NULL, "categories_id" integer NOT NULL, "start_date" date NOT NULL, "completed" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_categories_id" ON "missions"  ("categories_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_task_id" ON "missions"  ("task_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_tasker_id" ON "missions"  ("tasker_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "rating" integer NOT NULL, "tasker_id" integer NOT NULL, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  ↳ db/schema.rb:45
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key)[0m
+  ↳ db/schema.rb:45
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:48
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying NOT NULL, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:48
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:48
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:48
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:48
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201118042520)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201116201045),
+(20201116200412),
+(20201116200857),
+(20201118042503);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-25 03:42:27.744497"], ["updated_at", "2020-11-25 03:42:27.744497"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (27.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "job_type" character varying NOT NULL, "task_id" integer NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_categories_on_task_id" ON "categories"  ("task_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "missions" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "missions" ("id" bigserial primary key, "task_id" integer NOT NULL, "tasker_id" integer NOT NULL, "categories_id" integer NOT NULL, "start_date" date NOT NULL, "completed" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_categories_id" ON "missions"  ("categories_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_task_id" ON "missions"  ("task_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_missions_on_tasker_id" ON "missions"  ("tasker_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "rating" integer NOT NULL, "tasker_id" integer NOT NULL, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  ↳ db/schema.rb:45
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key)[0m
+  ↳ db/schema.rb:45
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:48
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying NOT NULL, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:48
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:48
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:48
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:48
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201118042520)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (17.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201116201045),
+(20201116200412),
+(20201116200857),
+(20201118042503);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-25 03:42:28.055400"], ["updated_at", "2020-11-25 03:42:28.055400"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-11-25 03:42:28.067702"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FLHatVgsCf5A97z9lhlDAg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$MQEwi18Lxr.Ul72hc0iEu.nn0Ib0vTKneqHDucfFw7vZ36J/UVmSi"], ["session_token", "FLHatVgsCf5A97z9lhlDAg"], ["email", "demouser@example.com"], ["created_at", "2020-11-25 03:42:28.635097"], ["updated_at", "2020-11-25 03:42:28.635097"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+Started GET "/" for ::1 at 2020-11-24 22:43:06 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ray/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 6953ms (Views: 6941.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-24 22:43:16 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+Completed 401 Unauthorized in 35ms (Views: 0.8ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-24 22:46:08 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Bt0MFZ3zAUwPQNTz8EBhsA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Bt0MFZ3zAUwPQNTz8EBhsA"], ["updated_at", "2020-11-25 03:46:08.633831"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (4.1ms)
+Completed 200 OK in 540ms (Views: 22.4ms | ActiveRecord: 20.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-11-24 22:46:48 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Bt0MFZ3zAUwPQNTz8EBhsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qkKJ9U_OCXVigy6ps7XpzA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qkKJ9U_OCXVigy6ps7XpzA"], ["updated_at", "2020-11-25 03:46:48.623926"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 65ms (Views: 21.9ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/api/session" for ::1 at 2020-11-24 22:46:51 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>""}}
+Started POST "/api/session" for ::1 at 2020-11-24 22:49:15 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tt_o6HZ0on2Au_9o-WieqQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tt_o6HZ0on2Au_9o-WieqQ"], ["updated_at", "2020-11-25 03:49:28.421070"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:53
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (3.4ms)
+Completed 200 OK in 13251ms (Views: 24.2ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/" for ::1 at 2020-11-24 22:52:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tt_o6HZ0on2Au_9o-WieqQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.9ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+Completed 200 OK in 3121ms (Views: 3113.3ms | ActiveRecord: 0.9ms)
+
+

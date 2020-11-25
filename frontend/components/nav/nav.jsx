@@ -6,7 +6,7 @@ const Nav = props => {
 
   const displaybuttons = props.loggedIn ? (
     // <div className="logoutbutton">
-      <button className="session-submit" onClick={props.logout}>
+      <button className="login" onClick={props.logout}>
         Logout
       </button>
     // </div>
@@ -21,7 +21,7 @@ const Nav = props => {
   const bookbutton = props.loggedIn ? (
     // <div className="book-task-button">
       <Link to="/task/new">
-        <button className="session-submit">
+        <button className="login">
           Book a Task
         </button>
       </Link>
