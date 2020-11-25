@@ -19,7 +19,7 @@ import Intermediary from './session_form/intermediary';
 
 
 const App = () => {
-  //debugger
+  debugger
   return (
     <div>
         {/* <GreetingContainer /> */}
