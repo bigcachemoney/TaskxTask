@@ -5,6 +5,8 @@
 
 .taskform-header-top{
   background-color: rgb(255, 255, 255);
+  display: flex; 
+  justify-content: center;
 }
 
 .taskform-middle-container{
@@ -41,10 +43,6 @@
 }
 
 
-.taskform-header-bottom{
-  text-align: center;
-}
-
 .taskform-container{
     background-image: url('https://upload-os-bbs.mihoyo.com/upload/2020/09/14/1013950/ec652a6ea054df9bd3c16da8a62756b5_5943270740035137873.jpg?x-oss-process=image/resize,s_740/quality,q_80/auto-orient,0/interlace,1/format,jpg');
   // background-image: url('https://i.imgur.com/CkSRmCB.jpg');
@@ -74,3 +72,92 @@
   // justify-content: space-around;
   list-style-type: none;
 }
+
+.taskform-nav-progress {
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.taskform-nav-step {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.taskform-nav-step > div {
+    flex-grow: 1;
+}
+
+.taskform-nav-step-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.taskform-nav-num {
+    background-color: lightgray;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    align-self: center;
+    vertical-align: text-bottom;
+}
+
+.taskform-nav-empty {
+    flex-grow: 1;
+}
+
+.taskform-nav-line {
+    flex-grow: 1;
+    height: 0px;
+    border-bottom: 3px solid #cfd2d7;
+    align-self: center;
+}
+
+.taskform-nav-bottom {
+    text-align: center;
+    color:  rgb(74, 77, 75);
+    font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.taskform-nav-num span {
+    top: 4.5px;
+    position: relative;
+    color: #242a30;
+}
+
+.taskform-header-bottom {
+    color: #242a30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #dce0e6;
+    width: 100%;
+    text-align: center;
+}
+
+
+.taskform-nav-num.active {
+    background-color: rgb(74, 181, 99);
+}
+
+.taskform-nav-num.active span {
+    color: white;
+}
+.taskform-nav-bottom.active {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.taskform-nav-line.active {
+  border-bottom: 4px solid rgb(74, 181, 99);
+
+}
+// .taskform-nav-step.active {
+//   cursor: pointer;
+// }
