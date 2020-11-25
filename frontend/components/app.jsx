@@ -15,6 +15,8 @@ import LogInFormContainer from './session_form/login_form_container';
 
 import SplashContainer from './splash/splash_container';
 import TaskFormContainer from './task_form/task_form_container';
+import Intermediary from './session_form/intermediary';
+
 
 const App = () => {
   debugger
@@ -28,6 +30,7 @@ const App = () => {
         <ProtectedRoute path="/task/" component={TaskFormContainer} />
         {/* <ProtectedRoute exact path="/tasks/:taskid" component={TaskShowContainer} /> */}
         <Route exact path="/" component={SplashContainer} />
+        <Route path="/intermediary" component={Intermediary} />
       </Switch>
 
     </div>

@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
       render "api/users/show"
     else
       # debugger
-      render json: ["Invalid username/password combination"], status: 401
+      render json: ["Invalid username or password"], status: 401
     end
   end
 
@@ -22,7 +22,7 @@ class Api::SessionsController < ApplicationController
       logout
       render "api/users/show"
     else
-      render json: ["Nobody signed in"], status: 404
+      render json: ["No user signed in"], status: 404
     end
   end
 end

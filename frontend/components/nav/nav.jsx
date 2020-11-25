@@ -13,8 +13,9 @@ const Nav = props => {
   ) : (
     <div className="buttons">
       {/* <Link className="login" to="/task">DEMO LOGIN</Link> */}
-      <Link className="login" to="/login">LOGIN</Link>
-      <Link className="signup" to="/signup">SIGN UP</Link>
+      {/* <Link className="login" to="/login">LOG IN</Link> */}
+      <Link className="login" to="/intermediary">LOG IN</Link>
+      {/* <Link className="signup" to="/signup">SIGN UP</Link> */}
     </div>
   ) 
   const bookbutton = props.loggedIn ? (
