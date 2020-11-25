@@ -50,3 +50,9 @@
   text-align: left;
   color: red;
 }
+
+.login-form{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

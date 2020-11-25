@@ -54,12 +54,13 @@ class SessionForm extends React.Component {
 
   render() {
     // debugger
-    const email = this.props.formType === 'sign up' ? (
-      <label>Email:
+    const email = this.props.formType === 'Sign Up' ? (
+      <label>
         <input type="text"
           value={this.state.email}
           onChange={this.update('email')}
           className="login-input"
+          placeholder="Email Address"
         />
       </label>
       
