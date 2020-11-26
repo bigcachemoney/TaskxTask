@@ -14,22 +14,57 @@ class TaskOptions extends React.Component {
             <span className="options-title">How big is your task?</span>
             <br />
 
-            <ul className="tasktime">
-              <li>
-              <input type="radio"/>
-              <label>Small - Est. 1 hr</label>
-              </li>
+            <div className="tasktime">
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Small - Est. 1 hr
+                </label>
+              {/* </li> */}
 
-              <li>
-              <input type="radio"/>
-              <label>Medium - Est. 2-3 hrs</label>
-              </li>
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Medium - Est. 2-3 hrs
+                </label>
+              {/* </li> */}
 
-              <li>
-              <input type="radio"/>
-              <label>Large - Est. 4+ hrs</label>
-              </li>
-            </ul>
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Large - Est. 4+ hrs
+                </label>
+              {/* </li> */}
+
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Day(s)
+                </label>
+              {/* </li> */}
+
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Week(s)
+                </label>
+              {/* </li> */}
+              
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Months(s)
+                </label>
+              {/* </li> */}
+
+              {/* <li> */}
+                <label>
+                  <input type="radio" name="time"/>
+                    Years(s)
+                </label>
+              {/* </li> */}
+
+            </div>
 
           </div>
 
@@ -38,39 +73,54 @@ class TaskOptions extends React.Component {
 
             <ul className="vehicle-list">
               <li>
-                <input type="radio"/>
-                <label>Not needed for task</label>  
+                <label>
+                  <input type="radio" name="formoptions" value="Not needed for this task"/>
+                  Not needed for this task
+                </label>  
+              </li>
+              
+              <li>
+                <label>
+                  <input type="radio" name="formoptions" value=""/>
+                  Mount(s)
+                </label>  
+              </li>
+              
+              <li>
+                <label>
+                  <input type="radio" name="formoptions" value=""/>
+                  Small vehicle(s)
+                </label>  
+              </li>
+              
+              <li>
+                <label>
+                  <input type="radio" name="formoptions" value=""/>
+                  Large vehicle(s)
+                </label>  
+              </li>
+              
+              <li>
+                <label>
+                  <input type="radio" name="formoptions" value=""/>
+                  Aircraft(s)
+                </label>  
+              </li>
+              
+              <li>
+                <label>
+                  <input type="radio" name="formoptions" value=""/>
+                  Flying creature(s)
+                </label>  
+              </li>
+              
+              <li>
+                <label>
+                  <input type="radio" name="formoptions" value=""/>
+                  Gate or portal
+                </label>  
               </li>
 
-              <li>
-                <input type="radio"/>
-                <label>Task requires a mount</label>
-              </li>
-
-              <li>
-                <input type="radio"/>
-                <label>Task requires a car</label>
-              </li>
-
-              <li>
-                <input type="radio"/>
-                <label>Task requires a large vehicle</label>
-              </li>
-
-              <li>
-                <input type="radio"/>
-                <label>Task requires a plane</label>
-              </li>
-
-              <li>
-                <input type="radio"/>
-                <label>Task requires a flying creature</label>
-              </li>
-
-              <li>
-                <input type="radio"/>
-                <label>Task requires a gate or portal</label>
-              </li >
             </ul>
           </div> 
         </div>
