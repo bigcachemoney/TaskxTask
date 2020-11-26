@@ -9839,3 +9839,10 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 41ms (Views: 22.6ms | ActiveRecord: 7.4ms)
 
 
+Started GET "/" for ::1 at 2020-11-26 01:28:48 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 2194ms (Views: 2176.2ms | ActiveRecord: 0.0ms)
+
+

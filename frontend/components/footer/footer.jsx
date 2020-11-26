@@ -23,11 +23,6 @@ class Footer extends React.Component {
             <FaLinkedin size="40"/>
           </a>
 
-          <a href="https://www.instagram.com/sizzlinwok/" className="socialmedia">
-            {/* <button className="instagram"></button> */}
-            <FaInstagram size="40"/>
-          </a>
-
         </div>
       </div>
 
