@@ -8,124 +8,76 @@ import Recommendations from "../recommendation/recommendation";
 
 const Splash = props => {
 
-  // const displaybuttons = props.loggedIn ? ( 
-  //   <div className="logoutbutton">
-  //     <button className="session-submit" onClick={props.logout}>
-  //       Logout
-  //     </button>
-  //   </div>
-  // ) : (
-  //   <div className="buttons">
-  //     {/* <Link className="login" to="/task">DEMO LOGIN</Link> */}
-  //     <Link className="login" to="/login">LOGIN</Link>
-  //     <Link className="signup" to="/signup">SIGN UP</Link>
-  //   </div>
-  // )
-
-  // const bookbutton = props.loggedIn ? ( 
-  //   <div className="book-task-button">
-  //     <Link to="/task/new">
-  //       <button className="session-submit" onClick={props.logout}> 
-  //         Book a Task
-  //       </button>
-  //     </Link>
-  //   </div>
-  // ) : ('')
-  
   const treasure = props.loggedIn ? ( 
-    // <div className="treasure-hunt-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Treasure Hunt
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const protection = props.loggedIn ? ( 
-    // <div className="protection-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Protection
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const monster = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Monster Slaying
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const delivery = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Delivery
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const explore = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         World Exploration
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const tutor = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Tutelage
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const escort = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Escort
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const dungeon = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Dungeon Crawling
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const gather = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
+    <Link className="category" to="/task/new">
         Item Gathering
-      </button>
-    // {/* </div> */}
+    </Link>
   ) : ('')
 
   const threat = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
-        Threat Management
-      </button>
-    // {/* </div> */}
+    <Link className="category" to="/task/new">
+      Threat Management
+    </Link>
   ) : ('')
 
   const odd = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
-        Odd Jobs
-      </button>
-    // {/* </div> */}
+    <Link className="category" to="/task/new">
+      Odd Jobs
+    </Link>
   ) : ('')
 
   const info = props.loggedIn ? ( 
-    // <div className="monster-slaying-button">
-      <button className="category" onClick={props.logout}> 
-        Espionage
-      </button>
-    // {/* </div> */}
+    <Link className="category" to="/task/new">
+      Espionage
+    </Link>
   ) : ('')
 
 //debugger
@@ -145,7 +97,7 @@ const Splash = props => {
 
                         <div className="searchbox">
                           <input type="search" id="search" placeholder="I need help with..." />
-                          <Link className="searchbutton" to="/login">GET HELP TODAY</Link>
+                          <Link className="searchbutton" to="/task/new">GET HELP TODAY</Link>
                         </div>
                     </div>
                 </div>

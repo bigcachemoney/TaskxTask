@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
 
     <br />
     return (
-      <div className="wallpaper">
+      <div className="wallpaper2">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
