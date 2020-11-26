@@ -5,7 +5,7 @@ import Footer from '../footer/footer';
 export default () => {
 
   return (
-    <div className="wallpaper">
+    <div className="inter-wallpaper">
       <div className="login-form-container">
         <div className="login-form-box">
           <Link to="/">
