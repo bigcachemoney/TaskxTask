@@ -65,32 +65,36 @@ class SessionForm extends React.Component {
       </label>
       
     ) : ( '' );
+
+    const demoLogin = this.props.formType === 'Login' ? (
+      <button className="login" onClick={this.demoSubmit}>Demo Login</button>
+    ) : (''
+    // <input className="session-login" type="submit" value={this.props.navLink} />
+    );
+
+      // const switchBUtton = this.props.navLink === ''
+
     <br />
     return (
       <div className="wallpaper">
-
-
       <div className="login-form-container">
-
-
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
-          
             <div>
               <Link to="/">
                 <img className="inter-logo" src="https://i.imgur.com/7FP232c.png" />
               </Link>
             </div>
-
-
           <div className="errors">
             {this.renderErrors()}
           </div>
-            
 
           <div className="login-form">
             <br />
+
             {email}
+            <br />
+
             <label>
               <input type="text"
                 value={this.state.username}
@@ -112,11 +116,15 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-              {/* {this.props.navLink} */}
             <input className="session-login" type="submit" value={this.props.formType} />
-            <br />
+            {/* <input className="session-login" type="submit" value={this.props.navLink} /> */}
+              {/* <div className="login"> */}
+                {this.props.navLink}
+                {/* </div> */}
+            {/* <br /> */}
 
-            <button className="session-demo" onClick={this.demoSubmit}>Demo Login</button>
+            {demoLogin}
+              
           </div>
         </form>
       </div>

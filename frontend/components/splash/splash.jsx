@@ -168,8 +168,10 @@ const Splash = props => {
           </div>
 
         </div>
+
         <Recommendations />
-        <Footer />
+
+        <Footer />  
     </div>
   )
 }

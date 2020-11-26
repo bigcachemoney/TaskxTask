@@ -25,7 +25,7 @@
 .card{
   border-style: ridge;
   // border-radius: 1px;
-  width: 200px;
+  width: 350px;
   margin-top: 10px;
   // display: flex;
   // justify-content: space-around;
@@ -39,15 +39,20 @@
 }
 .skills{
   text-align: center;
+    font-size: 24px;
+
 }
 
 .skills-categories{
   text-align: center;
 }
-
+.profile-stats{
+  font-size: 24px;
+}
 .popular-text{
   text-align: center;
   background: rgb(212, 225, 228);
+  font-size: 21px;
 }
 .profile2{
   text-align: center;
@@ -87,6 +92,9 @@
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
+    font-size: 24px;
+    margin: 2px;
+
 }
 
 .card-footer{
@@ -96,4 +104,7 @@
 .tasker-button{
   color: #73AD21;
   background: white;
+      font-size: 20px;
+    margin: 5px;
+
 }
