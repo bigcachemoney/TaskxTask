@@ -169,7 +169,10 @@ const Splash = props => {
 
         </div>
 
-        <Recommendations />
+      <div className="rec">
+          
+          <Recommendations />
+          </div>
 
         <Footer />  
     </div>

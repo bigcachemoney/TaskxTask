@@ -14,6 +14,7 @@ class TaskOptions extends React.Component {
             <span className="options-title">How big is your task?</span>
             <br />
 
+
             <div className="tasktime">
               {/* <li> */}
                 <label>
@@ -67,7 +68,7 @@ class TaskOptions extends React.Component {
             </div>
 
           </div>
-
+          <br />
           <div>             
             <span className="options-title">Vehicle Requirements</span><br />
 

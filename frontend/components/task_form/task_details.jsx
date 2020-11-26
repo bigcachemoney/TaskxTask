@@ -21,7 +21,7 @@ class TaskDetails extends React.Component {
           <br />
           
           <div className="taskform-submit-button">
-            <button>See Taskers and Prices</button>
+            <button className="taskform-submit-button">See Taskers and Prices</button>
           </div>
         </div>
       </div>
