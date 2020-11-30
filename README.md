@@ -1,5 +1,3 @@
-# README
-
 # What is Task x Task?
 
 Task x Task provides a service platform for connecting users seeking assistance with a task with skilled Taskers. Taskers are skilled individuals committed to completing task postings and strive to exceed expectations. 
