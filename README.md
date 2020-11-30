@@ -25,7 +25,7 @@ The site offers users an insight to the website through a demostrative login use
 ### Challenges 
 The challenging part of this feature was to properly seed the database both on the application and cloud based side. 
 
-```
+```javascript
 User.create(
     username: 'demo', 
     email: 'demouser@example.com',  
@@ -37,11 +37,13 @@ User.create(
     const demo = {username: "demo", password: "123456"};
     this.props.processForm(demo);
   }
+
 ```
+
 
 Another feature I'm proud of is the Task Form page that shows the user which page of the form they are currently on. By dividing the webpage into specific `<div>`'s, a light-up button effect can be achieved.
 
-```
+```javascript
 <div className="taskform-nav-progress">
   <div className="taskform-nav-step">
     <div className="taskform-nav-step-top">
