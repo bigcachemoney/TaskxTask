@@ -18,7 +18,7 @@ Useful frontend modules includes:
 * babel
 * react/redux libraries
 
-Credits to [Alexandria Wong](https://github.com/alexawhy) for the amazing logo design. [Check out more of her designs here.](https://www.instagram.com/stealingmoonlightx/)
+Credits to [Alexandria Wong](https://github.com/alexawhy) for the amazing logo design. 
 
 The site offers users an insight to the website through a demostrative login user account. This account gives potential users freedom to preview what Task x Task can provide as an online platform. 
 
@@ -39,7 +39,7 @@ User.create(
   }
 ```
 
-Another feature I'm proud of is the Task Form page that shows the user which page of the form they are currently on. By dividing the webpage into specific `<div>`'s, a light-up CSS effect can be achieved.
+Another feature I'm proud of is the Task Form page that shows the user which page of the form they are currently on. By dividing the webpage into specific `<div>`'s, a light-up button effect can be achieved.
 
 ```
 <div className="taskform-nav-progress">
