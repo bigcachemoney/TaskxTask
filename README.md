@@ -4,7 +4,7 @@ Task x Task provides a service platform for connecting users seeking assistance 
 
 Task x Task is a web application based on the popular freelance marketplace company TaskRabbit. 
 
-![image](https://imgur.com/kCUOtxF)
+![](https://imgur.com/kCUOtxF.jpg)
 
 ## Technologies 
 The site is hosted on heroku, a platform as a service that enables developers to build applications on the cloud. Ruby on Rails is used on the backend to manage a postgreSQL database structure, while the frontend is managed by a JavaScript framework and library (React + Redux). 
